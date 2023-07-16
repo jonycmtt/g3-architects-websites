@@ -29,15 +29,25 @@ ul {
   color: #fff;
   font-size: 20px;
   font-weight: 600;
-  padding: 20px 25px;
+  padding: 17px 22px;
   border: 0;
   cursor: pointer;
 }
 
+/* main styles  */
+main {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+/* section styles */
+section {
+  margin: 90px 0;
+}
 /* header styles  */
 header {
   background: rgba(255, 144, 14, 0.1);
-  padding: 30px 150px;
+  padding: 30px 132px;
 }
 .brand-name {
   color: #131313;
@@ -86,21 +96,50 @@ nav > #menu {
   cursor: pointer;
   display: none;
 }
-/* Responsive Design  */
-@media (max-width: 576px) {
-  header {
-    padding: 30px 0;
-  }
-  .brand-name {
-    font-size: 1.3rem;
-  }
-  .banner-title {
-    font-size: 2rem;
-  }
-  .banner-content {
-    text-align: left;
-  }
+
+/* team styles  */
+#team-container {
+  display: flex;
+  align-items: center;
+  /* gap: 60px; */
+  justify-content: space-evenly;
 }
+.team-item:first-child {
+  flex-basis: 50%;
+}
+.team-item:last-child {
+  flex-basis: 45%;
+}
+.teams-img-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+.teams-content {
+  padding: 0 50px;
+}
+.teams-title {
+  color: #727272;
+  font-size: 2.6rem;
+  font-weight: 500;
+}
+.our {
+  color: #131313;
+  font-weight: 700;
+}
+.text-feature {
+  color: #ff900e;
+  font-weight: 700;
+}
+.teams-description {
+  color: #727272;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 26px; /* 162.5% */
+  margin: 20px 0;
+}
+
+/* Responsive Design  */
 
 @media (max-width: 992px) {
   header {
@@ -110,7 +149,7 @@ nav > #menu {
     position: fixed;
     width: 100%;
     flex-direction: column;
-    margin: 70px 0;
+    /* margin: 70px 0; */
     padding: 60px 0;
     align-items: center;
     background: #000;
@@ -127,5 +166,48 @@ nav > #menu {
   }
   .mobile-menu {
     display: block;
+  }
+  .mobile-menu:hover nav > #menu {
+    left: 0 !important;
+  }
+  /* team features  */
+  #team-container {
+    align-items: flex-start;
+    gap: 60px;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .team-item {
+    width: 100%;
+  }
+  .teams-content {
+    padding: 0 0;
+  }
+}
+
+@media (max-width: 768px) {
+  section {
+    margin: 50px 0;
+  }
+}
+
+@media (max-width: 576px) {
+  header {
+    padding: 30px 40px;
+  }
+  .brand-name {
+    font-size: 1.3rem;
+  }
+  .banner-title {
+    font-size: 2rem;
+  }
+  .banner-content {
+    text-align: left;
+  }
+  .teams-img-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .teams-title {
+    font-size: 2rem;
   }
 }
