@@ -29,7 +29,7 @@ ul {
   color: #fff;
   font-size: 20px;
   font-weight: 600;
-  padding: 15px 20px;
+  padding: 20px 25px;
   border: 0;
   cursor: pointer;
 }
@@ -50,6 +50,7 @@ nav {
   align-items: center;
 }
 nav > #menu {
+  position: relative;
   display: flex;
   gap: 50px;
 }
@@ -78,4 +79,53 @@ nav > #menu {
   font-weight: 400;
   line-height: 26px; /* 162.5% */
   margin: 17px 0 30px;
+}
+
+.mobile-menu {
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: none;
+}
+/* Responsive Design  */
+@media (max-width: 576px) {
+  header {
+    padding: 30px 0;
+  }
+  .brand-name {
+    font-size: 1.3rem;
+  }
+  .banner-title {
+    font-size: 2rem;
+  }
+  .banner-content {
+    text-align: left;
+  }
+}
+
+@media (max-width: 992px) {
+  header {
+    padding: 30px 40px;
+  }
+  nav > #menu {
+    position: fixed;
+    width: 100%;
+    flex-direction: column;
+    margin: 70px 0;
+    padding: 60px 0;
+    align-items: center;
+    background: #000;
+    top: 0;
+    height: 100%;
+    left: -999px;
+    z-index: 999;
+  }
+  .banner-content {
+    margin: 40px 0;
+  }
+  .banner-title {
+    font-size: 2.5rem;
+  }
+  .mobile-menu {
+    display: block;
+  }
 }
